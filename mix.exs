@@ -39,11 +39,14 @@ defmodule BBQ.Mixfile do
       {:nerves, "~> 0.3.0"},
       {:nerves_interim_wifi, "~> 0.1.0"},
       {:httpoison, "~> 0.9.0"},
+      {:gproc, "~> 0.5.0"},
     ]
   end
 
   def system(target) do
-    [{:"nerves_system_#{target}", ">= 0.0.0"}]
+    [
+      {:"nerves_system_#{target}", ">= 0.0.0"},
+    ]
   end
 
   def aliases do
