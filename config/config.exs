@@ -16,6 +16,6 @@ config :nerves, :firmware,
   rootfs_additions: "config/rootfs-additions"
 
 config :bbq, :wlan0,
-  ssid: "SSID",
+  ssid: System.get_env("WIFI_SSID"),
   key_mgmt: :"WPA-PSK",
-  psk: "PASSWORD"
+  psk: System.get_env("WIFI_PASSWORD")
